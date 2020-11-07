@@ -1,0 +1,21 @@
+---
+layout: default
+title: Azure SSO
+nav_order: 2
+parent: Azure Active Directory
+grand_parent: Azure
+permalink: /docs/azure/azuread/sso
+---
+# Setting up SSO using Azure Active Directory
+
+## SAML Authentication setup
+
+  The process to setup SAML based authentication levaraging Azure Active Directory is overall pretty simple and straight forward.  However, I've run into numerous vendors that say they do not support Azure AD.  Usually attributed to what is precieved to be the limited options available as opposed to other solutions.  In most cases we've been able to overcome the challenges.
+
+  - [x] Check
+  - [ ] Don't Check
+
+
+
+
+{: .fs-6 .fw-300 }
