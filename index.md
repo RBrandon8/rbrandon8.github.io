@@ -2,9 +2,13 @@
 layout: default
 title: Home
 nav_order: 1
-description: ""
+description: "A collection of useful information and documentation for IT infrastructure, security, and development."
 permalink: /
 ---
 
-# Welcome to MyAnyKey!
-## This site is my collection of useful information for common problems I've encountered.
+# Welcome to MyAnyKey
+{: .fs-9 }
+
+A collection of useful information and documentation for IT infrastructure, security, and development.
+{: .fs-5 }
+---
