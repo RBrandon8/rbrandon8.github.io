@@ -3,7 +3,7 @@ layout: post
 title: Conversion Cheat Sheet
 nav_order: 1
 parent: OpenSSL
-permalink: /_docs/exchange
+permalink: /_docs/OpenSSL/Conversions
 ---
 
 #### PFX to PEM combined CACerts
