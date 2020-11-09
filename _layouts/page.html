@@ -3,3 +3,13 @@ layout: default
 ---
 
 {{ content }}
+
+<ul>
+{% assign filtered_posts = site.docs | where: 'parent', 'Single Sign On' %}
+{% for doc in filtered_posts %}
+{{ doc.date }}
+    <li>
+    {{ doc.content | markdownify }}
+    </li>
+{% endfor %}
+</ul>

@@ -3,3 +3,15 @@ layout: default
 ---
 
 {{ content }}
+
+<ul>
+{% assign filtered_posts = site.docs | where: 'layout', 'post'  %}
+{% for doc in filtered_posts %}
+    <li>
+        <a href="{{ doc.url }}"> {{doc.parent}} - {{ doc.title }}</a>
+        {{ doc.date |date_to_string }}
+        {{ doc.content | markdownify }}    
+        <hr>
+    </li>
+{% endfor %}
+</ul>

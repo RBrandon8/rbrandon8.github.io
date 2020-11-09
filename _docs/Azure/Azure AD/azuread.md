@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Azure Active Directory
-nav_order: 3
+nav_order: 2
 parent: Azure
 has_children: true
-permalink: /docs/azure/azuread
+permalink: /_docs/azure/azuread
 ---
 
 # Azure Active Directory

@@ -88,7 +88,26 @@ footer_content: ""
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
+collections:
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  docs:
+    layout: post
+    permalink: "/:collection/:path/"
+    output: true
 
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    docs:
+      # Give the collection a name
+      name: Documentation
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link:  # show or hide edit this page link

@@ -1,12 +1,10 @@
 ---
 layout: page
-title: Azure
+title: SSRS
 nav_order: 3
 has_children: true
-permalink: /docs/azure
+permalink: /_docs/SSRS
 ---
-
-# Microsft Azure & O365 platforms 
 
 
 {: .fs-6 .fw-300 }
