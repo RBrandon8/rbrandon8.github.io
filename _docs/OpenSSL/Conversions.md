@@ -5,11 +5,20 @@ nav_order: 1
 parent: OpenSSL
 permalink: /_docs/OpenSSL/Conversions
 ---
-
-#### PFX to PEM combined CACerts
-
-#### PFX to PEM CACerts, Certificate, and Key
+### PFX to PEM
+#### Combined CACerts
+  Export Certificate
+  ```
+  openssl pkcs12 -in certname.pfx -nokeys -out cert.pem
+  ```
+  Export Key
+  ```
+  openssl pkcs12 -in cert.pfx -nocerts -out cert.key -nodes
+  ```
+### Seperate CACerts, Certificate, and Key files
 
 #### Remove Password from Key
-
+```
+openssl rsa -in cert.key -out certnopw.key 
+```
 #### Validate Certificates
