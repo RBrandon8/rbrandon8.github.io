@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building an F5 APM Policy with Radius MFA authentication
+title: APM Policy with Radius MFA
 nav_order: 1
 parent: F5
 permalink: /_docs/F5/CombineRadiusWithNTLM
