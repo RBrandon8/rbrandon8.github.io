@@ -4,7 +4,7 @@ author: Brandon Ricketts
 title: Integrating Teams Calendar with Exchange OnPrem and F5 Federation
 nav_order: 1
 parent: exchange
-date: 11/09/2020
+date: 09/11/2020
 permalink: /_docs/exchange/O365_Teams_Calendar_F5_Fed
 published: true
 ---
