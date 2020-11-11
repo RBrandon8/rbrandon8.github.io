@@ -9,8 +9,6 @@ permalink: /_docs/exchange/O365_Teams_Calendar_F5_Fed
 published: true
 ---
 
-## Integrating Teams Calendar's with an Exchange On Prem Hybrid Setup using F5 APM External Authentication
-
 ### Requirements
 
 - [x] Exchange 2016 CU3 or later
