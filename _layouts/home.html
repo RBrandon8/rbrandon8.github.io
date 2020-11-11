@@ -9,10 +9,10 @@ layout: default
 {% for doc in filtered_posts limit:5 %}
     <li>
         <h1><a href="{{ doc.url }}"> {{doc.parent}} - {{ doc.title }}</a></h1>
-        <hr>
         <h4>{{ doc.date |date_to_string }}</h4>
          <br>
-        {{ doc.content | markdownify }}    
+        {{ doc.content | markdownify }}            
+        <hr>
     </li>
 {% endfor %}
 </ul>
