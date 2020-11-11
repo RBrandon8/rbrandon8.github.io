@@ -5,7 +5,7 @@ title: SAML Authentication Setup
 nav_order: 2
 parent: Azure Active Directory
 grand_parent: Azure
-date: 11/08/2020
+date: 08/11/2020
 permalink: /_docs/azure/azuread/sso/SAML_Setup
 ---
 
