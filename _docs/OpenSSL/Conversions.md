@@ -3,7 +3,7 @@ layout: post
 title: Conversion Cheat Sheet
 nav_order: 1
 parent: OpenSSL
-date: 11/09/2020
+date: 09/11/2020
 permalink: /_docs/OpenSSL/Conversions
 ---
 ### PFX to PEM
@@ -21,10 +21,10 @@ permalink: /_docs/OpenSSL/Conversions
   
 ### Seperate CACerts, Certificate, and Key files
 
-#### Remove Password from Key
+### Remove Password from Key
 
 ```
 openssl rsa -in cert.key -out certnopw.key 
 ```
 
-#### Validate Certificates
+### Validate Certificates
