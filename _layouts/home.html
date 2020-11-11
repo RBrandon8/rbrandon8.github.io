@@ -8,8 +8,8 @@ layout: default
 {% assign filtered_posts = site.docs | where: 'layout', 'post'  %}
 {% for doc in filtered_posts limit:5 %}
     <li>
-        <h2><a href="{{ doc.url }}"> {{doc.parent}} - {{ doc.title }}</a></h2>
-        <h4>{{ doc.date |date_to_string }}</h4>
+        <h3><a href="{{ doc.url }}"> {{doc.parent}} - {{ doc.title }}</a></h3>
+        <h5>{{ doc.date |date_to_string }}</h5>
          <br>
         {{ doc.content | markdownify }}            
         <hr>
