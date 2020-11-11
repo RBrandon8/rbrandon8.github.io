@@ -4,7 +4,7 @@ author: Brandon Ricketts
 title: Template Building
 nav_order: 2
 parent: SSRS
-date: 11/08/2020
+date: 08/11/2020
 permalink: /_docs/SSRS/Setup/BuildingTemplates
 ---
 
