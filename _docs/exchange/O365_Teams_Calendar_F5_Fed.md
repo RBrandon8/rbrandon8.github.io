@@ -5,6 +5,7 @@ title: Integrating Teams Calendar with Exchange OnPrem and F5 Federation
 nav_order: 1
 parent: exchange
 permalink: /_docs/exchange/O365_Teams_Calendar_F5_Fed
+published: true
 ---
 
 ## Integrating Teams Calendar's with an Exchange On Prem Hybrid Setup using F5 APM External Authentication
@@ -12,11 +13,11 @@ permalink: /_docs/exchange/O365_Teams_Calendar_F5_Fed
 ### Requirements
 
 - [x] Exchange 2016 CU3 or later
-- [x] Funcition Hybrid Services
+- [x] Funcition Hybrid Services with OAuth setup
 - [x] Functioning F5 APM Federation with Exchange On Prem
 - [x] Understanding that this information is provided as is and is an attempt to help the reader make an informed decision on what is best for their environment.
 
-The default F5 iapp template for Exchange does have an option for integrating with hybrid services.  This does allow basic services communicaton, however the template does not appear to be keeping pace with changes in O365 authentication methods.  A great example of this is Teams Calendars.  In order for Temas Calendars to work with APM authentication for autodiscover services you must update the iRule to include the xml and all json uri's.
+The default F5 iapp template for Exchange does include an option for integrating with hybrid services.  The default settings allow for basic service communicaton, however the template does not seem to be keeping pace with changes in O365 authentication methods.  A great example of this is Teams Calendars.  In order for Teams Calendars to work with APM authentication for autodiscover services you must update the iRule to include the xml and all json uri's.
 
 
 
