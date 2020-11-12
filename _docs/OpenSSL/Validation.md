@@ -9,7 +9,7 @@ permalink: /_docs/OpenSSL/Validation
 ---
 <br>
 
-## Verify a self signed certificate
+## Verify a Self Signed Certificate
 {: .fs-5}
 ```
 openssl verify -CAfile CACert.pem -untrusted intermediare.pem cert.pem
