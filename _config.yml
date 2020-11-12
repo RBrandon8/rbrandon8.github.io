@@ -18,6 +18,8 @@ description: Collection of things from a Technology Architect, Security Admin, a
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://myanykey.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+commentbox: 
+  id: 5738229097562112-proj
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
 , "docs/tests/"
