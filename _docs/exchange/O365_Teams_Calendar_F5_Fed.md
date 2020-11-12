@@ -1,12 +1,11 @@
 ---
 layout: post
-author: Brandon Ricketts
-title: Integrating Teams Calendar with Exchange OnPrem and F5 Federation
+title: Integrating Teams Calendar with Exchange Hybrid with Federation
 nav_order: 1
-parent: exchange
-date: 09/11/2020
-permalink: /_docs/exchange/O365_Teams_Calendar_F5_Fed
+parent: Exchange
 published: true
+date: 09/11/2020
+permalink: /_docs/Exchange/O365_Teams_Calendar_F5_Fed
 ---
 
 ### Requirements

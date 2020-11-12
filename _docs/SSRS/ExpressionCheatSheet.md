@@ -4,6 +4,7 @@ author: Brandon Ricketts
 title: Expressions Cheat Sheet
 nav_order: 1
 parent: SSRS
+published: true
 date: 08/11/2020
 permalink: /_docs/SSRS/Setup/Expression Cheat Sheet
 ---
