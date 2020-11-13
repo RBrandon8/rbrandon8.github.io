@@ -12,38 +12,36 @@ permalink: /_docs/SSRS/Setup/Expression Cheat Sheet
 ## Date Expressions
 ---
   First day of last month: 
-```
-=dateadd("m",-1,dateserial(year(Today),month(Today),1))  
-```
+  {% capture code %}=dateadd("m",-1,dateserial(year(Today),month(Today),1)){% endcapture %}
+  {% include code.html code=code lang="" %}
+
   First day of this month: 
-```
-=dateadd("m",0,dateserial(year(Today),month(Today),1))  
-```
+  {% capture code %}=dateadd("m",0,dateserial(year(Today),month(Today),1)){% endcapture %}
+  {% include code.html code=code lang="" %}
+
   First day of next month: 
-```
-=dateadd("m",1,dateserial(year(Today),month(Today),1))  
-```
+  {% capture code %}=dateadd("m",1,dateserial(year(Today),month(Today),1)){% endcapture %}
+  {% include code.html code=code lang="" %}
+
   Last day of last month: 
-```
-=dateadd("m",0,dateserial(year(Today),month(Today),0)) 
-```
+{% capture code %}=dateadd("m",0,dateserial(year(Today),month(Today),0)){% endcapture %}
+{% include code.html code=code lang="" %}
+
   Last day of this month: 
-```
-=dateadd("m",1,dateserial(year(Today),month(Today),0)) 
-```
+{% capture code %}=dateadd("m",1,dateserial(year(Today),month(Today),0)){% endcapture %}
+{% include code.html code=code lang="" %}
+
   Last day of next month: 
-```
-=dateadd("m",2,dateserial(year(Today),month(Today),0)) 
-```
+{% capture code %}=dateadd("m",2,dateserial(year(Today),month(Today),0)){% endcapture %}
+{% include code.html code=code lang="" %}
 
 ## Alternating Row Highlighting
 ---
   Alternating Row
-```
-=IIF(ROWNUMBER(NOTHING) MOD 2, "White", "LightGrey") 
-```
+{% capture code %}=IIF(ROWNUMBER(NOTHING) MOD 2, "White", "LightGrey"){% endcapture %}
+{% include code.html code=code lang="" %}
+
   Alternating Row with groups
-```
-=IIF(RunningValue(Fields!Location.Value, CountDistinct, Nothing) MOD 2 = 1,  "White", "LightGrey") 
-```
+{% capture code %}=IIF(RunningValue(Fields!Location.Value, CountDistinct, Nothing) MOD 2 = 1,  "White", "LightGrey"){% endcapture %}
+{% include code.html code=code lang="" %}
  

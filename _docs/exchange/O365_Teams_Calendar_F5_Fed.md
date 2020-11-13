@@ -13,7 +13,6 @@ permalink: /_docs/Exchange/O365_Teams_Calendar_F5_Fed
 - [x] Exchange 2016 CU3 or later
 - [x] Funcition Hybrid Services with OAuth setup
 - [x] Functioning F5 APM Federation with Exchange On Prem
-- [x] Understanding that this information is provided as is and is an attempt to help the reader make an informed decision on what is best for their environment.
 
 The default F5 iapp template for Exchange does include an option for integrating with hybrid services.  The default settings allow for basic service communicaton, however the template does not seem to be keeping pace with changes in O365 authentication methods.  A great example of this is Teams Calendars.  In order for Teams Calendars to work with APM authentication for autodiscover services you must update the iRule to include the xml and all json uri's.
 
@@ -47,12 +46,11 @@ when HTTP_REQUEST {
 
 
 Updated Rule
-```
-priority 1
-when HTTP_REQUEST {
+{% capture code %}priority 1  
+when HTTP_REQUEST {  
 	 set is_disabled 0
 	 switch -glob [string tolower [HTTP::path]] {
-		 "/ews/mrsproxy.svc" -
+		 "/ews/mrsproxy.svc" -  
 		 "/ews/exchange.asmx/wssecurity" {
 			 set is_disabled 1
 			 set path [HTTP::path]
@@ -79,5 +77,7 @@ when HTTP_REQUEST_RELEASE {
 			unset is_disabled
 			unset path
 	}
-}
-```
+}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+

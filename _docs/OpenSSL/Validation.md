@@ -11,22 +11,21 @@ permalink: /_docs/OpenSSL/Validation
 
 ## Verify a self signed certificate
 {: .fs-5}
-```
-openssl verify -CAfile CACert.pem -untrusted intermediare.pem cert.pem
-```
+{% capture code %}openssl verify -CAfile CACert.pem -untrusted intermediare.pem cert.pem{% endcapture %}
+{% include code.html code=code lang="" %}
 <br>
 
 ## Verify Key and Certificate Match
 {: .fs-5}
-```
-openssl x509 -noout -modulus -in cert.pem | openssl md5
-openssl rsa -noout -modulus -in cert.key | openssl md5
-```
+{% capture code %}openssl x509 -noout -modulus -in cert.pem | openssl md5
+openssl rsa -noout -modulus -in cert.key | openssl md5{% endcapture %}
+{% include code.html code=code lang="" %}
+
+
 <br>
 
 ## Verify Certificate Expiration Date
 {: .fs-5}
-```
-openssl x509 -startdate -enddate -noout -in cert.pem
-```
+{% capture code %}openssl x509 -startdate -enddate -noout -in cert.pem{% endcapture %}
+{% include code.html code=code lang="" %}
 <br>
