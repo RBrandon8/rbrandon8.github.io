@@ -3,7 +3,7 @@ layout: post
 title: Management Powershell Commands
 nav_order: 1
 parent: Exchange
-published: false
+published: true
 date: 13/11/2020
 permalink: /_docs/Exchange/Powershell.md
 ---
