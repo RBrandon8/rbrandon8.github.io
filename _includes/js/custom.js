@@ -21,4 +21,3 @@ const copyCode = (clickEvent) => {
         copyCodeButton.addEventListener('click', copyCode);
     });
 });
-  

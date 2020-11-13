@@ -16,11 +16,11 @@ PFX to PEM
 <br>
   Export Certificate    
   {% capture code %}openssl pkcs12 -in certname.pfx -nokeys -out cert.pem{% endcapture %}
-  {% include code.html code=code lang="" %}
+  {% include code.html code=code lang="bash" %}
 
   Export Key
   {% capture code %}openssl pkcs12 -in cert.pfx -nocerts -out cert.key -nodes{% endcapture %}
-  {% include code.html code=code lang="" %}
+  {% include code.html code=code lang="bash" %}
 <br>
 
 ## Seperate CACerts, Certificate, and Key files  
@@ -28,20 +28,20 @@ PFX to PEM
 <br>
 Export CA
 {% capture code %}openssl pkcs12 -in cert.pfx -cacerts -nokeys -chain -out CACerts.pem{% endcapture %}
-{% include code.html code=code lang="" %}
+{% include code.html code=code lang="bash" %}
 
 Export Certificate
 {% capture code %}openssl pkcs12 -in certname.pfx -nokeys -out cert.pem{% endcapture %}
-{% include code.html code=code lang="" %}
+{% include code.html code=code lang="bash" %}
 
 Export Key
 {% capture code %}openssl pkcs12 -in cert.pfx -nocerts -out cert.key -nodes{% endcapture %}
-{% include code.html code=code lang="" %}
+{% include code.html code=code lang="bash" %}
 <br>
 
 ## Remove Password from Key  
 {: .fs-5}
 <br>
 {% capture code %}openssl rsa -in cert.key -out certnopw.key{% endcapture %}
-{% include code.html code=code lang="" %}
+{% include code.html code=code lang="bash" %}
 <br>
