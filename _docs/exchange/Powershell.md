@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PowerShell Commands
-nav_order: 3
+nav_order: 2
 parent: Exchange
 published: true
 permalink: /_docs/Exchange/Powershell
