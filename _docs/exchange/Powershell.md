@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Management Powershell Commands
-nav_order: 1
+title: PowerShell Commands
+nav_order: 3
 parent: Exchange
 published: true
-date: 13/11/2020
-permalink: /_docs/Exchange/Powershell.md
+permalink: /_docs/Exchange/Powershell
 ---
-
-<br>
-{: .fs-6}
-
 ## Remote Connections
 {: .fs-5}
-<br>
-  Connect to On Prem Exchange
-  {% capture code %}$UserCredential = Get-Credential
-  $Server = <exch_server_name>
+
+---
+Connect to On Prem Exchange
+
+{% capture code %}$UserCredential = Get-Credential
+$Server = <exch_server_name>
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "$server/PowerShell/" -Authentication Kerberos
 Import-PSSession $Session -DisableNameChecking{% endcapture %}
-  {% include code.html code=code lang="powershell" %}
+{% include code.html code=code lang="powershell" %}
+
+<br>

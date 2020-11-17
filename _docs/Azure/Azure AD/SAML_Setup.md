@@ -1,6 +1,5 @@
 ---
 layout: post
-author: Brandon Ricketts
 title: SAML Authentication Setup
 nav_order: 2
 parent: Azure Active Directory
