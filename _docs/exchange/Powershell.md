@@ -12,7 +12,7 @@ permalink: /_docs/Exchange/Powershell
 
 ---
 #### Connect to On Prem Exchange
-{: .fs-4}
+{: .fs-8}
 
 {% capture code %}$UserCredential = Get-Credential
 $Server = <exch_server_name>
