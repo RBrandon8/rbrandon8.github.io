@@ -8,7 +8,7 @@ date: 17/11/2020
 permalink: /_docs/Exchange/Powershell
 ---
 ## Remote Connections
-{: .fs-7}
+{: .fs-6}
 
 ---
  Connect to On Prem Exchange
@@ -83,7 +83,7 @@ Import-PSSession $sfbSession{% endcapture %}
 <br>
 
 ## Performance & Maintenance
-{: .fs-7}
+{: .fs-6}
 
 ---
 Mailbox Count Per DB
@@ -105,9 +105,5 @@ Exchange Backpressure Values
 {: .fs-5}
 
 {% capture code %}[xml]$bp=Get-ExchangeDiagnosticInfo [-Server <ServerIdentity> ] -Process EdgeTransport -Component ResourceThrottling; $bp.Diagnostics.Components.ResourceThrottling.ResourceTracker.ResourceMeter {% endcapture %}
-{% include code.html code=code lang="powershell" %}
-<br>
-
-{% capture code %}{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
