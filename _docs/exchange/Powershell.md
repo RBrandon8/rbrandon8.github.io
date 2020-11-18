@@ -20,10 +20,12 @@ Import-PSSession $Session -DisableNameChecking{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 
 <br>
-Prerequisites for O365 if not already installed
+Prerequisites for O365\Azure if not already installed
 - Install [Microsoft Online Services Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkId=286152) if not on Windows 10.
 - Install MSOnline module
 {% capture code %}Install-Module MSOnline{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+{% capture code %}set-executionpolicy remotesigned{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
@@ -47,7 +49,7 @@ Sharepoint Online
 {% capture code %}Install-Module -Name Microsoft.Online.SharePoint.PowerShell{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 {% capture code %}$orgName="org" <org.onmicrosoft.com>
-Connect-SPOService -Url https://$orgName-admin.sharepoint.comConnect-ExchangeOnline{% endcapture %}
+Connect-SPOService -Url https://$orgName-admin.sharepoint.com{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
