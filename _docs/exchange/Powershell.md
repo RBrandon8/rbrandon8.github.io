@@ -11,7 +11,7 @@ permalink: /_docs/Exchange/Powershell
 {: .fs-5}
 
 ---
-Connect to On Prem Exchange
+- Connect to On Prem Exchange
 
 {% capture code %}$UserCredential = Get-Credential
 $Server = <exch_server_name>
@@ -20,7 +20,7 @@ Import-PSSession $Session -DisableNameChecking{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 
 <br>
-Prerequisites for O365\Azure if not already installed
+- Prerequisites for O365\Azure if not already installed
 - Install [Microsoft Online Services Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkId=286152) if not on Windows 10.
 - Install MSOnline module
 {% capture code %}Install-Module MSOnline{% endcapture %}
@@ -30,7 +30,7 @@ Prerequisites for O365\Azure if not already installed
 {% include code.html code=code lang="powershell" %}
 <br>
 
-AzureAD w/ Modern Auth
+- AzureAD w/ Modern Auth
 - Install Module
 {% capture code %}Install-Module -Name AzureAD{% endcapture %}
 {% include code.html code=code lang="powershell" %}
@@ -39,13 +39,13 @@ AzureAD w/ Modern Auth
 {% include code.html code=code lang="powershell" %}
 <br>
 
-Exchange Online w/ Modern Auth
-- Install Module
-{% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
-{% include code.html code=code lang="powershell" %}
-- Connect
-{% capture code %}Connect-ExchangeOnline{% endcapture %}
-{% include code.html code=code lang="powershell" %}
+- Exchange Online w/ Modern Auth
+  - Install Module
+  {% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
+  {% include code.html code=code lang="powershell" %}
+  - Connect
+  {% capture code %}Connect-ExchangeOnline{% endcapture %}
+  {% include code.html code=code lang="powershell" %}
 <br>
 
 Sharepoint Online w/ Modern Auth
