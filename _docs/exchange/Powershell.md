@@ -21,8 +21,8 @@ Import-PSSession $Session -DisableNameChecking{% endcapture %}
 
 <br>
 - Prerequisites for O365\Azure if not already installed
-- Install [Microsoft Online Services Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkId=286152) if not on Windows 10.
-- Install MSOnline module
+    - Install [Microsoft Online Services Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkId=286152) if not on Windows 10.
+    - Install MSOnline module
 {% capture code %}Install-Module MSOnline{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 - Allow local and remote signed scripts
