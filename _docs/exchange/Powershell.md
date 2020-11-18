@@ -36,9 +36,10 @@ AzureAD
 <br>
 
 Exchange Online
-{% capture code %}$credential = Get-Credential
-Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline -Credential $credential -ShowProgress $true{% endcapture %}
+- Install Module
+{% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+{% capture code %}Connect-ExchangeOnline{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
