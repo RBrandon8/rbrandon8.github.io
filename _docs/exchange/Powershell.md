@@ -40,12 +40,12 @@ Import-PSSession $Session -DisableNameChecking{% endcapture %}
 <br>
 
 - Exchange Online w/ Modern Auth
-  - Install Module
-  {% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
-  {% include code.html code=code lang="powershell" %}
-  - Connect
-  {% capture code %}Connect-ExchangeOnline{% endcapture %}
-  {% include code.html code=code lang="powershell" %}
+- Install Module
+{% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+- Connect
+{% capture code %}Connect-ExchangeOnline{% endcapture %}
+{% include code.html code=code lang="powershell" %}
 <br>
 
 Sharepoint Online w/ Modern Auth
