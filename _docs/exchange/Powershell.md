@@ -28,9 +28,10 @@ Prerequisites for O365 if not already installed
 <br>
 
 AzureAD
-{% capture code %}$credential = Get-Credential
-Connect-AzureAD -Credential $credential
-Connect-MsolService -Credential $credential{% endcapture %}
+- Install Module
+{% capture code %}Install-Module -Name AzureAD{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+{% capture code %}Connect-AzureAD{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
