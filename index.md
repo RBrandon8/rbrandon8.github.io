@@ -13,6 +13,6 @@ A collection of useful information and documentation for IT infrastructure, secu
 {: .fs-5 }
 
 Latest Posts
-{: .fs-6}
+{: .fs-7}
 ---
 
