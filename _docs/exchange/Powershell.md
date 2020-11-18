@@ -8,11 +8,11 @@ date: 17/11/2020
 permalink: /_docs/Exchange/Powershell
 ---
 ## Remote Connections
-{: .fs-5}
+{: .fs-7}
 
 ---
  Connect to On Prem Exchange
-{: .fs-6}
+{: .fs-5}
 
 {% capture code %}$UserCredential = Get-Credential
 $Server = <exch_server_name>
@@ -22,7 +22,7 @@ Import-PSSession $Session -DisableNameChecking{% endcapture %}
 
 <br>
 Prerequisites for O365\Azure if not already installed
-{: .fs-7}
+{: .fs-5}
 
 - Install [Microsoft Online Services Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkId=286152) if not on Windows 10.
 - Install MSOnline module
@@ -34,7 +34,7 @@ Prerequisites for O365\Azure if not already installed
 <br>
 
 AzureAD w/ Modern Auth
-{: .fs-8}
+{: .fs-5}
 
 - Install Module
 {% capture code %}Install-Module -Name AzureAD{% endcapture %}
@@ -45,7 +45,7 @@ AzureAD w/ Modern Auth
 <br>
 
 Exchange Online w/ Modern Auth
-{: .fs-4}
+{: .fs-5}
 
 - Install Module
 {% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
@@ -56,7 +56,7 @@ Exchange Online w/ Modern Auth
 <br>
 
 Sharepoint Online w/ Modern Auth
-{: .fs-3}
+{: .fs-5}
 
 - Install Module
 {% capture code %}Install-Module -Name Microsoft.Online.SharePoint.PowerShell{% endcapture %}
@@ -68,7 +68,7 @@ Connect-SPOService -Url https://$orgName-admin.sharepoint.com{% endcapture %}
 <br>
 
 Teams\Skype Online w/ Modern Auth
-{: .fs-2}
+{: .fs-5}
 
 - Install Module
 {% capture code %}Install-Module MicrosoftTeams{% endcapture %}
@@ -83,20 +83,27 @@ Import-PSSession $sfbSession{% endcapture %}
 <br>
 
 ## Performance & Maintenance
+{: .fs-7}
 
 ---
 Mailbox Count Per DB
+{: .fs-5}
+
 {% capture code %}Get-Mailbox -ResultSize unlimited | Group-Object -Property:Database | Select-Object Name,Count | Sort-Object Name | Format-Table -Auto {% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
 Server Version
+{: .fs-5
+
 {% capture code %}Get-ExchangeServer | Format-List Name,Edition,AdminDisplayVersion {% endcapture %}
 {% include code.html code=code lang="powershell" %}
 Run command and compare build number to the Microsoft [documentation](https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates?view=exchserver-2016)
 <br>
 
 Exchange Backpressure Values
+{: .fs-5}
+
 {% capture code %}[xml]$bp=Get-ExchangeDiagnosticInfo [-Server <ServerIdentity> ] -Process EdgeTransport -Component ResourceThrottling; $bp.Diagnostics.Components.ResourceThrottling.ResourceTracker.ResourceMeter {% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
