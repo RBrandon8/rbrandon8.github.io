@@ -11,8 +11,7 @@ permalink: /_docs/Exchange/Powershell
 {: .fs-5}
 
 ---
-#### Connect to On Prem Exchange
-{: .fs-8}
+Connect to On Prem Exchange
 
 {% capture code %}$UserCredential = Get-Credential
 $Server = <exch_server_name>
@@ -21,21 +20,43 @@ Import-PSSession $Session -DisableNameChecking{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 
 <br>
-#### Prerequisites for O365 if not already installed
+Prerequisites for O365 if not already installed
 - Install [Microsoft Online Services Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkId=286152) if not on Windows 10.
 - Install MSOnline module
 {% capture code %}Install-Module MSOnline{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
-#### Exchange Onlne w/ Modern Auth
-Connect-MsolService
+AzureAD w/ Modern Auth
+{% capture code %}$credential = Get-Credential
+Connect-AzureAD -Credential $credential
+Connect-MsolService -Credential $credential{% endcapture %}
+{% include code.html code=code lang="powershell" %}
 <br>
 
-#### Teams\Skype Online w/ Modern AUth
+Exchange Online w/ Modern Auth
+{% capture code %}$credential = Get-Credential
+Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline -Credential $credential -ShowProgress $true{% endcapture %}
+{% include code.html code=code lang="powershell" %}
 <br>
 
-## Performance & Maintenance
+Sharepoint Online w/ Modern Auth
+{% capture code %}$credential = Get-Credential
+$orgName= "myorg" <myorg.microsoft.com>
+Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $Credential{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+<br>
+
+Teams\Skype Online w/ Modern Auth
+{% capture code %}$credential = Get-Credential
+Import-Module MicrosoftTeams
+$sfboSession = New-CsOnlineSession -Credential $credential
+Import-PSSession $sfboSession{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+<br>
+
+##Performance & Maintenance
 
 ---
 Mailbox Count Per DB
