@@ -25,35 +25,40 @@ Prerequisites for O365\Azure if not already installed
 - Install MSOnline module
 {% capture code %}Install-Module MSOnline{% endcapture %}
 {% include code.html code=code lang="powershell" %}
+- Allow local and remote signed scripts
 {% capture code %}set-executionpolicy remotesigned{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
-AzureAD
+AzureAD w/ Modern Auth
 - Install Module
 {% capture code %}Install-Module -Name AzureAD{% endcapture %}
 {% include code.html code=code lang="powershell" %}
+- Connect
 {% capture code %}Connect-AzureAD{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
-Exchange Online
+Exchange Online w/ Modern Auth
 - Install Module
 {% capture code %}Install-Module -Name ExchangeOnlineManagement{% endcapture %}
 {% include code.html code=code lang="powershell" %}
+- Connect
 {% capture code %}Connect-ExchangeOnline{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
-Sharepoint Online
+Sharepoint Online w/ Modern Auth
+- Install Module
 {% capture code %}Install-Module -Name Microsoft.Online.SharePoint.PowerShell{% endcapture %}
 {% include code.html code=code lang="powershell" %}
+- Connect
 {% capture code %}$orgName="org" <org.onmicrosoft.com>
 Connect-SPOService -Url https://$orgName-admin.sharepoint.com{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
-Teams\Skype Online
+Teams\Skype Online w/ Modern Auth
 {% capture code %}Install-Module MicrosoftTeams{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 {% capture code %}Import-Module MicrosoftTeams
