@@ -44,17 +44,19 @@ Exchange Online
 <br>
 
 Sharepoint Online
-{% capture code %}$credential = Get-Credential
-$orgName= "myorg" <myorg.microsoft.com>
-Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $Credential{% endcapture %}
+{% capture code %}Install-Module -Name Microsoft.Online.SharePoint.PowerShell{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+{% capture code %}$orgName="org" <org.onmicrosoft.com>
+Connect-SPOService -Url https://$orgName-admin.sharepoint.comConnect-ExchangeOnline{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
 Teams\Skype Online
-{% capture code %}$credential = Get-Credential
-Import-Module MicrosoftTeams
-$sfboSession = New-CsOnlineSession -Credential $credential
-Import-PSSession $sfboSession{% endcapture %}
+{% capture code %}Install-Module MicrosoftTeams{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+{% capture code %}Import-Module MicrosoftTeams
+$sfbSession = New-CsOnlineSession
+Import-PSSession $sfbSession{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
