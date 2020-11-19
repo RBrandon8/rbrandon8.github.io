@@ -93,7 +93,7 @@ Mailbox Count Per DB
 <br>
 
 Server Version
-{: .fs-5
+{: .fs-5}
 
 {% capture code %}Get-ExchangeServer | Format-List Name,Edition,AdminDisplayVersion {% endcapture %}
 {% include code.html code=code lang="powershell" %}
