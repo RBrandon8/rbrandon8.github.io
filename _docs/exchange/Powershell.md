@@ -74,8 +74,7 @@ Teams\Skype Online w/ Modern Auth
 {% capture code %}Install-Module MicrosoftTeams{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 - Connect
-
-* Not working with Powershell 7 currently *
+*Not working with Powershell 7 currently
 {% capture code %}Import-Module MicrosoftTeams
 $sfbSession = New-CsOnlineSession
 Import-PSSession $sfbSession{% endcapture %}
