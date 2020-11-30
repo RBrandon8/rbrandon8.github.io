@@ -81,6 +81,16 @@ Import-PSSession $sfbSession{% endcapture %}
 {% include code.html code=code lang="powershell" %}
 <br>
 
+Security & Compliance Center
+{: .fs-5}
+
+- Install Module
+{% capture code %}Import-Module ExchangeOnlineManagement{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+- Connect
+{% capture code %}Connect-IPPSSession -UserPrincipalName user@domain.com{% endcapture %}
+{% include code.html code=code lang="powershell" %}
+<br>
 ## Performance & Maintenance
 {: .fs-6}
 
